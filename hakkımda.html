@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./görseller/pp.jpg" />
+    <link rel="canonical" href="https://berkovic36.github.io/Berk/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Biyografi Web Sitesi" />
+    <meta name="language" content="tr" />
+    
+    <!-- Open Graph / Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://berkovic36.github.io/Berk/" />
+    <meta property="og:title" content="BerkDev" />
+    <meta property="og:description" content="Biyografi Web Sitesi" />
+    <meta property="og:image" content="https://berkovic36.github.io/Berk/görseller/pp.jpg" />
+    <meta property="og:image:alt" content="BerkDev biyografi" />
+    <meta property="og:locale" content="tr_TR" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://berkovic36.github.io/Berk/" />
+    <meta name="twitter:title" content="BerkDev" />
+    <meta name="twitter:description" content="Biyografi Web Sitesi" />
+    <meta name="twitter:image" content="https://berkovic36.github.io/Berk/görseller/pp.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "BerkDev",
+            "url": "https://berkovic36.github.io/Berk/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "tr-TR",
+            "description": "Biyografi Web Sitesi",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "name": "BerkDev",
+            "url": "https://berkovic36.github.io/Berk/",
+            "inLanguage": "tr-TR"
+          }
+        ]
+      }
+    </script>
+    <title>BerkDev</title>
+
+
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+        :root {
+            --primary-color: #38bdf8; /* Açık Mavi / Turkuaz */
+            --bg-dark: #020813;
+            --glass-bg: rgba(16, 33, 60, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-light: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* KENDİ ARKA PLAN RESMİNİ BURAYA EKLEYEBİLİRSİN */
+            /* Şu anki kod senin gönderdiğin 'image_d121d8.jpg' dosyasına göre ayarlandı */
+            background: linear-gradient(rgba(2, 8, 19, 0.7), rgba(2, 8, 19, 0.7)), url('./görseller/sea.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Ortak Buzlu Cam Efekti */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- ÜST MENÜ (NAVBAR) --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(10, 20, 40, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        nav a i { margin-right: 8px; }
+
+        /* --- 1. SEVİYE: HERO BÖLÜMÜ --- */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .hero-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero-section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #cbd5e1;
+        }
+
+        /* --- 2. SEVİYE: BİYOGRAFİ & VİZYON --- */
+        .bio-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 30px;
+        }
+        .bio-image {
+            flex: 0 0 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .bio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .bio-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bio-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .vision-box {
+            margin-top: 20px;
+            padding-left: 15px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* --- 3. SEVİYE: YETENEKLER --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .skill-card {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s, background 0.3s;
+            cursor: default;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--primary-color);
+        }
+        .skill-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        .skill-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .skill-info p {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* --- 4. SEVİYE: ÇALIŞMA SÜRECİ --- */
+        .workflow-section {
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .workflow-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+        .workflow-step i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        .workflow-step span {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .workflow-arrow {
+            font-size: 1.5rem;
+            color: #64748b;
+        }
+
+
+        /* MOBİL UYUM */
+        @media (max-width: 768px) {
+            .bio-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .bio-image {
+                margin: 0 auto;
+            }
+            .vision-box {
+                border-left: none;
+                border-top: 3px solid var(--primary-color);
+                padding-left: 0;
+                padding-top: 15px;
+            }
+            .workflow-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .workflow-arrow {
+                transform: rotate(90deg);
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> AnaSayfa</a>
+        <a href="hakkımda.html" style="color: var(--primary-color);"><i class="fa-solid fa-user"></i> Hakkımda</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- 1. Seviye: Hero -->
+        <div class="hero-section glass-panel">
+            <h1>Merhaba, Ben Berk</h1>
+            <h2>Yazılım Geliştirici & Teknoloji Tutkunu</h2>
+            <p>Geleceğin teknolojilerini bugünden kodluyor, modern web çözümleri ve yenilikçi projeler üretiyorum.</p>
+        </div>
+
+        <!-- 2. Seviye: Bio ve Vizyon -->
+        <div class="bio-section glass-panel">
+            <div class="bio-image">
+                <!-- Eğer kendi profil fotoğrafın varsa 'senin-foton.jpg' yazan yere ismini yaz -->
+                 <img src="./görseller/profil.png" alt="profil">
+                
+            </div>
+            <div class="bio-content">
+                <h3>Hakkımda</h3>
+                <p>Yaklaşık 1 buçuk senedir aktif yazılım öğreniyorum ve kodluyorum. İlgi alanlarım; AI | Yazılım | İHA | Savunma Sanayii | Elektrik Elektronik. Genç bir yazılımcıyım ilerde büyük projeler yapmayı planlıyorum, bu siteyi hem kendimi tanıtmak hem de bütçe oluşturabilmek için kurdum.</p>
+                <div class="vision-box">
+                    <strong>Vizyonum:</strong> Savunma sanayii ve havacılıkta otonom sistemler, Web site, Windows uygulamaları geliştirmek ve teknoloji dünyasında kalıcı izler bırakmak. <br>
+                    <strong>İletişim Bilgilerim:</strong> berkozkulacikgoz@gmail.com, discord: berkovic
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Seviye: Yetenekler -->
+        <div class="skills-grid">
+            <div class="skill-card glass-panel">
+                <i class="fa-brands fa-php"></i>
+                <div class="skill-info">
+                    <h4>Php</h4>
+                    <p>Sunucu Taraflı Programlama & Backend</p>
+                </div>
+            </div>
+            <div class="skill-card glass-panel">
+                <i class="fa-brands fa-html5"></i>
+                <div class="skill-info">
+                    <h4>HTML/CSS</h4>
+                    <p>Modern Arayüz Tasarımı</p>
+                </div>
+            </div>
+            <div class="skill-card glass-panel">
+                <i class="fa-brands fa-java"></i>
+                <div class="skill-info">
+                    <h4>Java</h4>
+                    <p>Nesne Yönelimli Programlama (OOP) ve Algoritma Mantığı</p>
+                </div>
+            </div>
+            <div class="skill-card glass-panel">
+                <i class="fa-solid fa-pen-nib"></i>
+                <div class="skill-info">
+                    <h4>Web Tasarımı</h4>
+                    <p>UI/UX Odaklı Yaklaşım</p>
+                </div>
+            </div>
+            <div class="skill-card glass-panel">
+                <i class="fa-solid fa-rocket"></i>
+                <div class="skill-info">
+                    <h4>Sistem Optimizasyonu</h4>
+                    <p>Yüksek Performans</p>
+                </div>
+            </div>
+            <div class="skill-card glass-panel">
+                <i class="fa-solid fa-microchip"></i>
+                <div class="skill-info">
+                    <h4>Donanım</h4>
+                    <p>Elektronik & Kart Programlama</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Seviye: İş Akışı -->
+        <div class="workflow-section glass-panel">
+            <div class="workflow-container">
+                <div class="workflow-step">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <span>1. İhtiyacı Analiz Ederim</span>
+                </div>
+                <i class="fa-solid fa-arrow-right workflow-arrow"></i>
+                <div class="workflow-step">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>2. Modern Tasarımlar Kurgularım</span>
+                </div>
+                <i class="fa-solid fa-arrow-right workflow-arrow"></i>
+                <div class="workflow-step">
+                    <i class="fa-solid fa-code"></i>
+                    <span>3. Kodlarım ve Teslim Ederim</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+    <script>
+  // 1. Menümüzdeki tüm linkleri seçiyoruz
+  const menuLinkleri = document.querySelectorAll('.wrapper a');
+  
+  // 2. Tarayıcıdaki şu anki tam adresi (URL) alıyoruz
+  const suAnkiSayfa = window.location.href;
+
+  // 3. TEMİZLİK ADIMI: Sayfa yüklendiğinde, kopyala-yapıştır hatasıyla HTML'de 
+  // unutulmuş olabilecek tüm 'active' sınıflarını temizliyoruz.
+  menuLinkleri.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // 4. EŞLEŞTİRME ADIMI: Menüdeki linkleri adres çubuğuyla karşılaştırıyoruz
+  menuLinkleri.forEach(link => {
+    // Eğer linkin adresi, şu an bulunduğumuz sayfanın adresiyle birebir aynıysa
+    // VEYA şu anki adres, linkin HTML'de yazan hedefini (href) içeriyorsa
+    if (link.href === suAnkiSayfa || suAnkiSayfa.endsWith(link.getAttribute('href'))) {
+      
+      // O linkin altına beyaz çizgiyi çeken sınıfı ekliyoruz
+      link.classList.add('active');
+      
+    }
+  });
+</script>
+</html>

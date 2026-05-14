@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./görseller/pp.jpg" />
+    <link rel="canonical" href="https://berkovic36.github.io/Berk/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Biyografi Web Sitesi" />
+    <meta name="language" content="tr" />
+    
+    <!-- Open Graph / Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://berkovic36.github.io/Berk/" />
+    <meta property="og:title" content="BerkDev" />
+    <meta property="og:description" content="Biyografi Web Sitesi" />
+    <meta property="og:image" content="https://berkovic36.github.io/Berk/görseller/pp.jpg" />
+    <meta property="og:image:alt" content="BerkDev biyografi" />
+    <meta property="og:locale" content="tr_TR" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://berkovic36.github.io/Berk/" />
+    <meta name="twitter:title" content="BerkDev" />
+    <meta name="twitter:description" content="Biyografi Web Sitesi" />
+    <meta name="twitter:image" content="https://berkovic36.github.io/Berk/görseller/pp.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "BerkDev",
+            "url": "https://berkovic36.github.io/Berk/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "tr-TR",
+            "description": "Biyografi Web Sitesi",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "name": "BerkDev",
+            "url": "https://berkovic36.github.io/Berk/",
+            "inLanguage": "tr-TR"
+          }
+        ]
+      }
+    </script>
+    <title>BerkDev</title>
+      
+      <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+        :root {
+            --primary-color: #38bdf8; 
+            --glass-bg: rgba(16, 33, 60, 0.5); /* Butonlar için buzlu cam */
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-light: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* Arka plan görselin */
+            background: linear-gradient(rgba(2, 8, 19, 0.6), rgba(2, 8, 19, 0.6)), url('./görseller/sea.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-light);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- ÜST MENÜ (NAVBAR) --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(10, 20, 40, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        nav a i { margin-right: 8px; }
+
+        /* --- ANA SAYFA ORTA ALAN --- */
+        .home-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            margin-top: 60px; /* Navbar boşluğu */
+        }
+
+        /* Profil Kısmı */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            padding: 5px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+        }
+        .profile-image i {
+            font-size: 4rem;
+            color: var(--text-light);
+        }
+        .profile-section h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: white;
+        }
+        .profile-section p {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        /* Uzun Yönlendirme Butonları (Linktree Tarzı) */
+        .links-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .link-btn i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.3rem;
+        }
+        .link-btn:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* En Alt Sosyal Medya İkonları */
+        .social-footer {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        .social-footer a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-footer a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .modal-arkaplan {
+          display: none; /* Başlangıçta gizli tutar */
+          position: fixed;
+          z-index: 9999; /* Sayfadaki her şeyin en üstünde durmasını sağlar */
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7); /* Arka planı karartır */
+          justify-content: center;
+          align-items: center;
+        }
+        
+        /* Ortadaki Açılan Kutu (Görselindeki temaya uygun koyu lacivert tonları) */
+        .modal-icerik {
+          background-color: #172436; /* Senin butonuna yakın bir arka plan rengi */
+          color: #ffffff;
+          padding: 30px;
+          border-radius: 12px; /* Köşeleri yuvarlatır */
+          width: 80%;
+          max-width: 600px;
+          position: relative;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+          font-family: sans-serif;
+          transform: scale(1.35);
+          
+        }
+        
+        /* Çarpı (Kapatma) Butonu */
+        .kapat-buton {
+          color: #aaaaaa;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: color 0.2s;
+        }
+        
+        .kapat-buton:hover,
+        .kapat-buton:focus {
+          color: #ffffff;
+        }
+        
+        .örnek1, .örnek2 {
+            width: 100%;
+            height: 100%;
+            border: solid #ffffff;
+            border-radius: 5px;
+            margin-top: 6px;
+        }
+
+    </style>
+    </head>
+    <body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" style="color: var(--primary-color);"><i class="fa-solid fa-house"></i> AnaSayfa</a>
+        <a href="hakkımda.html"><i class="fa-solid fa-user"></i> Hakkımda</a>
+    </nav>
+
+    <!-- Ana Sayfa İçeriği -->
+    <div class="home-container">
+        
+        <!-- Profil ve İsim -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <!-- Buraya kendi profil fotoğrafını ekleyebilirsin. Örn: <img src="profil.jpg" style="width:100%; border-radius:50%;"> -->
+                <img src="./görseller/pp.jpg" style="width: 100%; border-radius: 50%;">
+            </div>
+            <h1>Berk Açıkgöz</h1>
+            <p>Java Geliştirici & Teknoloji Tutkunu</p>
+        </div>
+
+        <!-- Üst Üste Uzun Butonlar -->
+        <div class="links-container">
+            <a href="hakkımda.html" class="link-btn">
+                <i class="fa-solid fa-user-tie"></i> Hakkımda Daha Fazlası
+            </a>
+            
+            <a href="javascript:void(0)" id="projeButon" class="link-btn">
+                <i class="fa-solid fa-code"></i> Projelerimi İncele
+            </a>
+            
+        </div>
+        
+        <div id="projeModal" class="modal-arkaplan">
+
+           <div class="modal-icerik">
+             <span class="kapat-buton">&times;</span>
+             <h2>Projelerim</h2>
+             <img src="./görseller/kvkbot.png" class="örnek1">
+             <span>KvkBot projem.</span>
+             <a href="https://berkovic36.github.io/kvkbot/" style="color: white;">
+                https://berkovic36.github.io/kvkbot/
+             </a>
+             <img src="./görseller/login.png" class="örnek2">
+             <span>Login projem.</span>
+             <a href="https://berkovic36.github.io/login/" style="color: white;">
+                https://berkovic36.github.io/login/
+             </a>
+           </div>
+         </div>
+
+        <!-- Sosyal Medya -->
+        <div class="social-footer">
+            <a href="https://github.com/berkovic36"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.gg/AsDGppWbX"><i class="fa-brands fa-discord"></i></a>
+        </div>
+
+    </div>
+
+</body>
+    <script>
+  // 1. Menümüzdeki tüm linkleri seçiyoruz
+  const menuLinkleri = document.querySelectorAll('.nav a');
+  
+  // 2. Tarayıcıdaki şu anki tam adresi (URL) alıyoruz
+  const suAnkiSayfa = window.location.href;
+
+  // 3. TEMİZLİK ADIMI: Sayfa yüklendiğinde, kopyala-yapıştır hatasıyla HTML'de 
+  // unutulmuş olabilecek tüm 'active' sınıflarını temizliyoruz.
+  menuLinkleri.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // 4. EŞLEŞTİRME ADIMI: Menüdeki linkleri adres çubuğuyla karşılaştırıyoruz
+  menuLinkleri.forEach(link => {
+    // Eğer linkin adresi, şu an bulunduğumuz sayfanın adresiyle birebir aynıysa
+    // VEYA şu anki adres, linkin HTML'de yazan hedefini (href) içeriyorsa
+    if (link.href === suAnkiSayfa || suAnkiSayfa.endsWith(link.getAttribute('href'))) {
+      
+      // O linkin altına beyaz çizgiyi çeken sınıfı ekliyoruz
+      link.classList.add('active');
+      
+    }
+  });
+  const modal = document.getElementById("projeModal");
+const buton = document.getElementById("projeButon");
+const kapatmaCarpisi = document.getElementsByClassName("kapat-buton")[0];
+
+// Butona tıklandığında modalı aç (display özelliğini flex yapıyoruz ki ortalansın)
+buton.onclick = function() {
+  modal.style.display = "flex";
+}
+
+// Çarpıya (x) basıldığında modalı kapat
+kapatmaCarpisi.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Kullanıcı kutunun dışına (karanlık alana) tıklarsa da modal kapansın
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</html>
